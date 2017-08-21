@@ -1,0 +1,329 @@
+<html>
+	<head>
+		<title>Home | Intramuros Administration</title>
+
+		<script src="jquery-2.1.3.min.js"></script>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" href="IA-CSS.css">
+
+		<style>
+			#BodyContainer{
+				width: 1165px;
+				margin: 0 auto;
+				padding: 30px 20px 0px 20px;
+				z-index: 1;
+			}
+			#ServicesContainerALL{
+				width: 495px;
+				height: 495px;
+				padding-left: 30px;
+				display: inline-block;
+			}
+			.ServicesContainerEACH{
+				width: 185px;
+				padding: 5px 5px 0 5px;
+				display: inline-block;
+			}
+			.ServicesContainerEACH:hover{
+				background-color: #DCDDCB;
+				transition: all 0.5s 0.2s;
+			}
+			.ServicesImages{
+				width: 185px;
+				height: auto;
+			}
+			.ServicesText{
+				color: black;
+				font-weight: bold;
+				margin: 3px;
+				padding-bottom: 2px;
+				text-align: center;
+			}
+			.UrbanContainer, .TourContainer{
+				float: left;
+			}
+			.BusinessContainer, .RespubContainer{
+				float: right;
+			}
+			#ServicesRow2{
+				width: 495px;
+				margin-top: 20px;
+				display: inline-block;
+			}
+
+
+			#AnnounceContainer{
+				width: 420px;
+				height: 420px;
+				margin: 13px;
+				border: 5px solid #F79326;
+				float: right;
+				display: inline-block;
+				overflow: hidden;
+			}
+			#AnnouncePic{
+				background-position: 0% 100%;
+				width: 420px;
+				height: auto;
+				opacity: 0.5;
+			}
+			#AnnouncePic:hover{
+				opacity: 1;
+				transition: all 0.5s 0.2s;
+			}
+			.clear{
+				clear: both;
+			}
+			#AnnounceText{
+				color: white;
+				height: 40px;
+				padding-top: 5px;
+				padding-left: 10px;
+				position: relative;
+				bottom: 205px;
+				background-color: rgba(51,45,41, 0.7);
+			}
+			#AnnounceLink{
+				color: white;
+			}
+			#AnnounceLink:hover{
+				font-weight: bold;
+				transition: all 0.5s;
+			}
+			#MoreButton{
+				width: 23px;
+				height: auto;
+				padding-right: 5px;
+				float: right;
+				display: inline-block;
+			}
+			.clear{
+				clear: both;
+			}
+
+
+			#SocMedContainer{
+				height: 200px;
+				width: 1090px;
+				margin: 0 auto;
+				margin-top: 55px;
+				text-align: center;
+			}
+			.SocmedBox{
+				width: 295px;
+				height: 155px;
+				overflow: hidden;
+				display: inline-block;
+			}
+			.fbbox{
+				background-image: url(edited.png);
+				float: left;
+			}
+			.clear{
+				clear: both;
+			}
+			.instabox{
+				background-image: url(edited.png);
+				float: right;
+			}
+			.clear{
+				clear: both;
+			}
+			.twitbox{
+				background-image: url(edited.png);
+				margin: 0 auto;
+				display: inline-block;
+			}
+			.SocmedPhoto{
+				width: 295px;
+				height: auto;
+				opacity: 0.7;
+			}
+			.SocmedPhoto:hover{
+				opacity: 1;
+				transition: all 0.5s 0.2s;
+			}
+			.clear{
+				clear: both;
+			}
+		</style>
+	</head>
+
+	<body onload="startTime()">
+		<div id="TopContainerHead">
+			<div id="Header1190">
+				<div id="TopHeader">
+					<ul id="Level1">
+						<li><img id="TopGovtSeal" src="footlogo.png"></li>
+						<li><a class="MainLinks homelink" href="IA-Home.html">HOME</a></li>
+						<li><a class="MainLinks aboutlink" href="IA-About.html">ABOUT</a>
+							<ul>
+								<li><a class="MainLinks PD1616link" href="PD1616.html">Presidential Decree<br>Order No.1616</a></li>
+								<li><a class="MainLinks PD1748link" href="PD1748.html">Presidential Decree<br>Order No.1748</a></li>
+								<li><a class="MainLinks OrgStructlink" href="OrgStruct.html">Organizational<br>Structure</a></li>
+							</ul>
+						</li>
+						<li><a class="MainLinks serviceslink" href="IA-Services.html">SERVICES</a>
+							<ul>
+								<li><a href="UrbanServ.html">Urban Services</a></li>
+								<li><a href="BusinessServ.html">Business Services</a></li>
+								<li><a href="TourServ.html">Tourism Services</a></li>
+								<li><a href="ResPubServ.html">Research and Publication</a></li>
+								<li><a href="Downloads.html">Downloads</a></li>
+							</ul>
+						</li>
+						<li><a class="MainLinks announcelink" href="IA-Announce.html">ANNOUNCEMENTS</a>
+							<ul>
+								<li><a href="UpcomingEvents.html">Upcoming Events</a></li>
+								<li><a href="Projects.html">Projects</a></li>
+							</ul>
+						</li>
+						<li><a class="MainLinks contactlink" href="IA-Contact.html">CONTACT US</a></li>
+						<li><a class="MainLinks transseallink" href="IA-TransSeal.html">TRANSPARENCY SEAL</a></li>
+						<li id="searchbar">SEARCH<img id="searchlogo" src="Website IA following govt guidelines-12.png"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="TopContainerMast">
+			<div id="Mast1190">
+				<div id="TopMast">
+					<a href="IA-Home.html">
+						<img id="IALogo" src="IA LOGO WHITE TEXT-04.png">
+					</a>
+
+					<div id="datetime">
+						<p id="time"></p>
+						<p id="date">JAN 01, 2015 Mon.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="BodyContainer">
+			<div id="ServicesContainerALL">
+				<div id="ServicesRow1">	
+					<div class="ServicesContainerEACH UrbanContainer">
+						<a href="UrbanServ.html">
+							<img class="ServicesImages" src="webicons-05.png">
+							<p class="ServicesText">URBAN<br>SERVICES</p>
+						</a>
+					</div>
+
+					<div class="ServicesContainerEACH BusinessContainer">
+						<a href="BusinessServ.html">
+							<img class="ServicesImages" src="webicons-06.png">
+							<p class="ServicesText">BUSINESS SERVICES</p>
+						</a>
+					</div>
+				</div>
+
+				<div id="ServicesRow2">
+					<div class="ServicesContainerEACH TourContainer">
+						<a href="TourServ.html">
+							<img class="ServicesImages" src="webicons-07.png">
+							<p class="ServicesText">TOURISM SERVICES</p>
+						</a>
+					</div>
+
+					<div class="ServicesContainerEACH RespubContainer">
+						<a href="ResPubServ.html">
+							<img class="ServicesImages" src="webicons-08.png">
+							<p class="ServicesText">RESEARCH AND PUBLICATION</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="AnnounceContainer">
+				<a href="IA-Announce.html">
+					<img id="AnnouncePic" src="11050766_623709657728522_1562348851749714884_n.jpg">
+					<div id="AnnounceText">
+						<a id="AnnounceLink" href="IA-Announce">
+							More Announcements Here
+							<img id="MoreButton" src="Website IA following govt guidelines-13.png">
+						</a>
+					</div>
+				</a>
+			</div>
+
+			<div id="SocMedContainer">
+				<div class="SocmedBox fbbox">
+					<a href="https://www.facebook.com/OfficialIntramurosAdministration">
+						<img class="SocmedPhoto facebook" src="Website IA following govt guidelines-09.png">
+					</a>
+				</div>
+
+				<div class="SocmedBox instabox">
+					<a href="https://instagram.com/intramurosph/">
+						<img class="SocmedPhoto instagram" src="Website IA following govt guidelines-11.png">
+					</a>
+				</div>
+
+				<div class="SocmedBox twitbox">
+					<a href="https://twitter.com/intramuros">
+						<img class="SocmedPhoto twitter" src="Website IA following govt guidelines-10.png">
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="FooterContainer">
+			<div id="Footer1190">
+				<div class="SiteMap SiteMap1">
+					<ul>
+						<li><a class="SiteMapLinks" href="IA-Home.html">Home</a></li>
+						<li><a class="SiteMapLinks" href="IA-About.html">About</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="PD1616.html">Presidential Decree Order No.1616</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="PD1748.html">Presidential Decree Order No.1748</a></li>
+						<li><a class="SiteMapLinks" href="IA-Services.html">Services</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="UrbanServ.html">Urban Services</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="BusinessServ.html">Business Services</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="TourServ.html">Tourism Services</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="ResPubServ.html">Research and Publication</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="Downloads.html">Downloads</a></li>
+					</ul>
+				</div>
+
+				<div class="SiteMap SiteMap2">
+					<ul>
+						<li><a class="SiteMapLinks" href="IA-Announce.html">Announcements</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="UpcomingEvents.html">Events</a></li>
+						<li><a class="SiteMapLinks SMLIndented" href="Infographics.html">Infographics</a></li>
+						<li><a class="SiteMapLinks" href="IA-ContactUs.html">Contact Us</a></li>
+						<li><a class="SiteMapLinks" href="IA-TranSeal.html">Transparency Seal</a></li>
+					</ul>
+				</div>
+
+				<div id="SealContainer">
+					<a href="IA-TranSeal.html">
+						<img id="BigTranSeal" src="transparency-seal-300x300.png">
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+			function startTime() {
+			    var today=new Date();
+			    var h=today.getHours();
+			    var m=today.getMinutes();
+			    var s=today.getSeconds();
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('time').innerHTML = h+":"+m+":"+s;
+			    var t = setTimeout(function(){startTime()},500);
+			}
+
+			function checkTime(i) {
+			    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+	</script>
+</html>
